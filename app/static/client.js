@@ -14,6 +14,18 @@ function showPicked(input) {
   reader.readAsDataURL(input.files[0]);
 }
 
+function showRecommendation() {
+	var x = document.getElementById("recom");
+	if(x.style.display === "none") {
+		x.style.display = "block"
+	} else {
+		x.style.display = "none";
+	}
+	
+	
+}
+
+
 function analyze() {
   var uploadFiles = el("file-input").files;
   if (uploadFiles.length !== 1) alert("Please select a file to analyze!");
@@ -34,10 +46,13 @@ function analyze() {
 		  el("result-label").innerHTML = `Result = ${response["result"]}`;
       if (response["result"] == `extra_class`) {
         el("result2").innerHTML = `Strawberry Image uploaded is an Excellent Quality Product!`;
+		el("recom").innerHTML = `Recommendation : TEST`;
       } else if (response["result"] == `class1`) {
         el("result2").innerHTML = `Strawberry Image uploaded is an Good Quality Product!`;
+		el("recom").innerHTML = `Recommendation : TEST2`;
       } else if (response["result"] == `class2`) {
         el("result2").innerHTML = `Strawberry Image uploaded is an Bad Quality Product!`;
+		el("recom").innerHTML = `Recommendation : TEST3`;
       }
       
     }
