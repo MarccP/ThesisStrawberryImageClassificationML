@@ -46,13 +46,19 @@ function analyze() {
 		  el("result-label").innerHTML = `Result = ${response["result"]}`;
       if (response["result"] == `extra_class`) {
         el("result2").innerHTML = `Strawberry Image uploaded is an Excellent Quality Product!`;
-		el("recom").innerHTML = `Recommendation : TEST`;
+		el("recom_customer").innerHTML = `Recommendation : For Customer, The Strawberry is a Excellent Quality.`;
+		el("recom_vendor").innerHTML = `Recommendation : For Vendor, The Strawberry is a Excellent Quality`;
+		el("recom_farmer").innerHTML = `Recommendation : For Farmer, The Strawberry is a Excellent Quality`;
       } else if (response["result"] == `class1`) {
         el("result2").innerHTML = `Strawberry Image uploaded is an Good Quality Product!`;
-		el("recom").innerHTML = `Recommendation : TEST2`;
+		el("recom_customer").innerHTML = `Recommendation : For Customer, The Strawberry is a Good Quality`;
+		el("recom_vendor").innerHTML = `Recommendation : For Vendor, The Strawberry is a Good Quality`;
+		el("recom_farmer").innerHTML = `Recommendation : For Farmer, The Strawberry is a Good Quality`;
       } else if (response["result"] == `class2`) {
         el("result2").innerHTML = `Strawberry Image uploaded is an Bad Quality Product!`;
-		el("recom").innerHTML = `Recommendation : TEST3`;
+		el("recom_customer").innerHTML = `Recommendation : For Customer, The Strawberry is a Bad Quality`;
+		el("recom_vendor").innerHTML = `Recommendation : For Vendor, The Strawberry is a Bad Quality`;
+		el("recom_farmer").innerHTML = `Recommendation : For Farmer, The Strawberry is a Bad Quality`;
       }
       
     }
