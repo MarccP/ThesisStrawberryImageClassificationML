@@ -78,7 +78,7 @@ Note: Weather should always be noted/monitored and added to the results of the s
         el("result2").innerHTML = `Strawberry Image uploaded is an Bad Quality Product!`;
 		el("recom_customer").innerHTML = `Recommendation : Strawberries are of low to mediocre quality should avoid buying at a high price.
 Strawberries show many signs of abnormality such as bruises and blemishes.`;
-		el("recom_vendor").innerHTML = `Recommendation : Strawberries are of low tomediocre quality do not market at a high price and keep mark-up at a low.
+		el("recom_vendor").innerHTML = `Recommendation : Strawberries are of low to mediocre quality do not market at a high price and keep mark-up at a low.
 Strawberries show many signs of abnormality such as bruises and blemishes. Recommended to be sold at a reasonable price and sold as a large bundle 
 or as flavoring agents, baking, jams, cures, wines.`;
 		el("recom_farmer").innerHTML = `Recommendation : Strawberries are of low to mediocre quality should either be left to ripen for few more days to a week and added supervision.
