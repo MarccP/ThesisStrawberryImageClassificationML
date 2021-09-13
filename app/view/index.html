@@ -5,6 +5,7 @@
   <script src='../static/client.js'></script>
 </head>
 <body>
+
 <div>
   <div class='center'>
     <div class='title'>Strawberry Image Classifier </div>
@@ -17,6 +18,10 @@
 	<p>
 	<strong>Class 1, Class 2 and Extra Class.</strong>
 	</p>
+	<div class="topnav">
+  <a class="active" href="#upload-label">Home</a>
+  <a href="#recom">Recommendations</a>
+</div>
     <div class='content'>
       <div class='no-display'>
         <input id='file-input'
@@ -34,35 +39,43 @@
         <img id='image-picked' class='no-display' alt='Chosen Image' height='250'>
       </div>
       <div class='analyze'>
-        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()' onclick='test()'>Analyze</button>
       </div>
-	  
-	  <p>&ensp;</p>
-	  
-	  <button class='choose-file-button' type='button' onClick='showRecommendation()'>Customer Recommendation</button>
-	  
-	  <div id ="recom">
-		<label id='recom_customer'></label>
-	  </div>
-	  
-	  <button class='choose-file-button' type='button' onClick='showRecommendation()'>Vendor Recommendation</button>
-	  
-	  <div id ="recom">
-		<label id='recom_vendor'></label>
-	  </div>
-	  
-	  <button class='choose-file-button' type='button' onClick='showRecommendation()'>Farmer Recommendation</button>
-	  
-	  <div id ="recom">
-		<label id='recom_farmer'></label>
-	  </div>
-	  
+
+      <p>&ensp;</p>
+
       <div class='result-label'>
         <label id='result-label'></label>
       </div>
 	  <div class='result2'>
 		<label id='result2'></label>
 	  </div>
+	  
+	
+	  
+	  <p>&ensp;</p>
+	  
+	
+	
+	<h1> Recommendations </h1>
+	 <p>&ensp;</p>
+	 
+	  <button class='choose-file-button' type='button' onClick='showRecommendation()'>Hide/Show Recommendations</button>
+	  <p>&ensp;</p>
+	  <div id ="recom" style="display: none">
+      <h2>Customer Recommendation : </h2>
+		<label id='recom_customer'></label>
+	   <p>&ensp;</p>
+     <h2>Vendor Recommendation : </h2>
+		<label id='recom_vendor'></label>
+    <p>&ensp;</p>
+    <h2>Farmer Recommendation : </h2>
+		<label id='recom_farmer'></label>
+    <p>&ensp;</p>
+	  </div>
+	  
+	  
+      
     </div>
   </div>
 </div>
