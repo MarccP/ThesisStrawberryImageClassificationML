@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../static/css/style.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strawberry Classifier</title>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav class="light-green lighten-1" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">🍓
+                    <span class="hide-on-small-only">Stwawbewwy UwU</span>
+                </a>
+                <ul class="right">
+                    <li><a onclick='showPicker()'>Select Image</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br><br><br>
+            <h1 class="header center pink-text">Strawberry Classifier</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Upload images of Strawberry</h5>
+            </div>
+            <div class="row center">
+                <input id='file-input' class='hide' type='file' name='file' accept='image/*'
+                    onchange='showPicked(this)'>
+                <button class="btn-large waves-effect waves-light pink" onclick='showPicker()'>Select
+                    Image</button>
+            </div>
+            <br><br>
+        </div>
+    </div>
+
+    <div class="container" style="min-height: 25vh;">
+        <!--   Image  -->
+        <div class="section">
+            <div class="row">
+                <div class="col s12 m8 offset-m2">
+                    <div id="card" class="card hide">
+                        <div class="card-image">
+                            <img id='image-picked' class="responsive-img">
+                            <span id="upload-label" class="card-title grey-text flow-text truncate">Image Title</span>
+                        </div>
+                        <!-- Analyze -->
+                        <div class="card-action center">
+                            <button id="analyze-button" class="col s12 btn-small waves-effect waves-light purple"
+                                onclick='analyze()'>Analyze
+                                🔍</button>
+                        </div>
+                        <!--   Results  -->
+                        <div id="recommendations" class="hide">
+                            <div class="card-content">
+                                <h5 class="center flow-text">✨Results & Recommendations</h5>
+                            </div>
+                            <div class="card-tabs">
+                                <ul id="tabs" class="tabs tabs-fixed-width">
+                                    <li class="tab hoverable"><a class="active" href="#statistics">statistics</a></li>
+                                    <li class="tab hoverable"><a href="#customers">customers</a></li>
+                                    <li class="tab hoverable"><a href="#vendors">vendors</a></li>
+                                    <li class="tab hoverable"><a href="#farmers">farmers</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-content grey lighten-4">
+                                <div id="statistics">
+                                    <div id="result">result</div>
+                                    <div id="result2">result2</div>
+                                </div>
+                                <div id="customers">customers</div>
+                                <div id="vendors">vendors</div>
+                                <div id="farmers">farmers</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+    <footer class="page-footer deep-purple">
+        <div class="footer-copyright">
+            <div class="container center">
+                Made with wuv ❤️</a>
+            </div>
+        </div>
+    </footer>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="../static/js/materialize.min.js"></script>
+    <script src='../static/js/script.js'></script>
+    <script>
+        const tabs = document.getElementById('tabs');
+        var instance = M.Tabs.init(tabs);
+    </script>
+</body>
+
+</html>
